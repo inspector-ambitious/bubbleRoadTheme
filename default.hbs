@@ -1167,7 +1167,7 @@ body:not(.post-template) .post-title {
     -webkit-align-items: stretch;
     -ms-flex-align: stretch;
     align-items: stretch;
-    margin-top: 10rem
+    /*margin-top: 10rem*/
 }
 .read-next-story {
     display: -webkit-box;
@@ -1208,8 +1208,8 @@ body:not(.post-template) .post-title {
     transition: all 0.5s ease
 }
 .read-next-story .post {
-    padding-top: 6rem;
-    padding-bottom: 6rem
+    padding-top: 1rem;
+    padding-bottom: 0;
 }
 .read-next-story .post:before {
     content: "Read This Next";
@@ -1365,6 +1365,9 @@ body:not(.post-template) .post-title {
     width: 45%;
     float: left
 }
+.post-template .disqus {
+    margin-top: 4rem;
+}
 @media only screen and (max-width: 900px) {
     blockquote {
         margin-left: 0
@@ -1462,7 +1465,7 @@ body:not(.post-template) .post-title {
         -webkit-flex-direction: column;
         -ms-flex-direction: column;
         flex-direction: column;
-        margin-top: 4rem
+        /*margin-top: 0;*/
     }
     .read-next p {
         display: none
@@ -1672,11 +1675,9 @@ body:not(.post-template) .post-title {
     .author-profile .author-meta span {
         font-size: 1.4rem
     }
-    .archive-template .main-header .page-description {
-        display: none
-    }
+
     .read-next {
-        margin-top: 2rem;
+        /*margin-top: 0;*/
         margin-bottom: -37px
     }
     .read-next .post {
