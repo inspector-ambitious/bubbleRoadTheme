@@ -14,13 +14,35 @@
         $postContent.fitVids();
 
         $(".scroll-down").arctic_scroll();
+        console.log('aaaa')
 
-        // $(".menu-button, .nav-cover, .nav-close").on("click", function(e){
-        //     e.preventDefault();
-        //     $("body").toggleClass("nav-opened nav-closed");
-        // });
+        var nav = $('.nav');
+        var origOffset = nav.offset().top;
+        var fixed = false;
 
+        function onWindowScroll(event) {
+            var scroll = $(window).scrollTop();
+            var offset = nav.offset().top;
+
+            if (fixed === false && scroll > origOffset) {
+                nav.addClass('fixed');
+                fixed = true;
+            } 
+
+            if (fixed === true && scroll < origOffset){
+                fixed = false;
+                nav.removeClass('fixed');
+            }
+            // 
+            // console.log(scroll, nav.offset())
+        }
+
+         $(window).scroll(onWindowScroll);
+        
+         // onWindowScroll();r
     });
+
+
 
     // Arctic Scroll by Paul Adam Davis
     // https://github.com/PaulAdamDavis/Arctic-Scroll
