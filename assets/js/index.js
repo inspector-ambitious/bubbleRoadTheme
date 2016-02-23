@@ -14,30 +14,30 @@
         $postContent.fitVids();
 
         $(".scroll-down").arctic_scroll();
-        console.log('aaaa')
+        // console.log('aaaa')
 
-        var nav = $('.nav');
-        var origOffset = nav.offset().top;
-        var fixed = false;
+        // var nav = $('.nav');
+        // var origOffset = nav.offset().top;
+        // var fixed = false;
 
-        function onWindowScroll(event) {
-            var scroll = $(window).scrollTop();
-            var offset = nav.offset().top;
+        // function onWindowScroll(event) {
+        //     var scroll = $(window).scrollTop();
+        //     var offset = nav.offset().top;
 
-            if (fixed === false && scroll > origOffset) {
-                nav.addClass('fixed');
-                fixed = true;
-            } 
+        //     if (fixed === false && scroll > origOffset) {
+        //         nav.addClass('fixed');
+        //         fixed = true;
+        //     } 
 
-            if (fixed === true && scroll < origOffset){
-                fixed = false;
-                nav.removeClass('fixed');
-            }
-            // 
-            // console.log(scroll, nav.offset())
-        }
+        //     if (fixed === true && scroll < origOffset){
+        //         fixed = false;
+        //         nav.removeClass('fixed');
+        //     }
+        //     // 
+        //     // console.log(scroll, nav.offset())
+        // }
 
-         $(window).scroll(onWindowScroll);
+        //  $(window).scroll(onWindowScroll);
         
          // onWindowScroll();r
     });
