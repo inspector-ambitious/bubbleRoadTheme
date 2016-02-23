@@ -581,32 +581,15 @@ iframe,
     font-family: 'Montserrat', sans-serif;
 }
 .nav {
-    /*text-align: center;*/
-
-    /*position: fixed;*/
-    /*top: 0;*/
-    /*left: 0;*/
-    /*right: 0;*/
-    /*z-index: 9999;*/
-    /*height: 2rem;*/
-/*    background-color: #DF305A;*/
-    /*margin: 0;*/
-    /*padding: 0;*/
-
-    position: absolute;
-    bottom: 0;
+	margin: 0;
 	left: 0;
 	right: 0;
     background-color: rgba(223, 48, 90, 0.85); /* #DF305A; */
-
-    	position: fixed;
+    position: fixed;
 	top: 0;
-	bottom: inherit;
 	background-color: #fff;
 	z-index: 99999;
 	border-bottom: 4px solid #EBF2F6;
-
-	/*border-bottom: 1px solid rgba(0,0,0,.5);*/
 }
 /*.no-cover .nav {
 	background-color: #DF305A !important;
@@ -628,6 +611,7 @@ iframe,
 
 .social-navigation {
 	float: right;
+	    padding-top: .28rem !important;
 }
 
 .social-navigation a {
@@ -643,14 +627,13 @@ iframe,
 	    color: #3b5998
 }*/
 
-.nav.fixed {
+/*.nav.fixed {
 	position: fixed;
 	top: 0;
 	bottom: inherit;
 	background-color: #DF305A;
 	z-index: 99999;
-
-}
+}*/
 
 .nav li {
     margin: 0;
@@ -873,8 +856,14 @@ li.nav-current {
   	top: 50%;
   	left: 50%;
   	transform: translate(-50%, -50%);
-    animation: fade-in 1s;
+    opacity: 0;
 }
+
+.main-header-content.animate {
+	opacity: 1;
+	animation: fade-in 1s;
+}
+
 .page-title {
     margin: 16px 0 10px 0;
     font-size: 5rem;
@@ -1825,7 +1814,12 @@ body:not(.post-template) .post-title {
 <body class="{{body_class}}">
 
 
-
+<script>
+	function onLogoLoad() {
+    	var el = document.querySelector('.main-header-content');	
+    	el.className = el.className + ' animate';
+    }
+</script>
 
     <div class="site-wrapper">
 
@@ -1840,6 +1834,7 @@ body:not(.post-template) .post-title {
 
 
     <script>
+
         (function() {
           var cb = function() {
 

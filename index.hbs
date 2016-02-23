@@ -8,7 +8,7 @@
 
         <div class="main-header-content inner">
             <h1 class="page-title">
-            {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>{{/if}}<span class="bubble">bubble</span><span class="road">road</span></h1><h2 class="page-description">{{@blog.description}}</h2>
+            {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" onload="onLogoLoad()"/></a>{{/if}}<span class="bubble">bubble</span><span class="road">road</span></h1><h2 class="page-description">{{@blog.description}}</h2>
         </div>
 
         {{navigation}}
